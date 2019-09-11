@@ -1,8 +1,9 @@
 <h1>Vehicles</h1>
 
 <ul>
-    <% @vehicles.each do |vehicle| %>
-        <li><%= vehicle %></li>
-    <% end %>
+<% @vehicles.each do |vehicle| %>
+  <li>
+    <strong><%= vehicle.year %> <%= vehicle.make %> <%= vehicle.name %> <%= vehicle.cartype %></strong> (<%= number_to_currency(vehicle.price) %>)
+  </li>
+<% end %>
 </ul>
-<%= @vehicles %>
