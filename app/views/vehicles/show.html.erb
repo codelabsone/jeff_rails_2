@@ -1,0 +1,25 @@
+<h1><%= @vehicles.name %></h1>
+
+<article>
+  <header>
+    <h1><%= @vehicles.make %></h1>
+  </header>
+  <h2>Description</h2>
+  <p>
+    <%= @vehicles.description %>
+  </p>
+  <h3>Cartype</h3>
+  <p>
+    <%= @vehicles.cartype %>
+  </p>
+  <h3>Year</h3>
+  <p>
+    <%= @vehicles.year %>
+  </p>
+  <h3>Price</h3>
+  <p>
+    <%= number_to_currency(@vehicles.price) %>
+  </p>
+</article>
+
+<%= link_to("All Vehicles", vehicles_path) %>

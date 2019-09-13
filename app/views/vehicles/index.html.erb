@@ -1,9 +1,41 @@
 <h1>Vehicles</h1>
 
-<ul>
 <% @vehicles.each do |vehicle| %>
-  <li>
-    <strong><%= vehicle.year %> <%= vehicle.make %> <%= vehicle.name %> <%= vehicle.cartype %></strong> (<%= number_to_currency(vehicle.price) %>)
-  </li>
+  <article>
+    <header>
+      <h2><%= link_to(vehicle.name, vehicle_path(vehicle)) %></h2>
+    </header>
+    <p>
+      <%= truncate(vehicle.description, length: 40, separator: ' ') %>
+    </p>
+    <table>
+      <tr>
+        <th>Cartype:</th>
+        <td><%= vehicle.cartype %></td>
+      </tr>
+      <tr>
+        <th>Year:</th>
+        <td><%= vehicle.year %></td>
+      </tr>
+      <tr>
+        <th>Price:</th>
+        <td><%= number_to_currency(vehicle.price) %></td>
+      </tr>
+    </table>
+  </article>
 <% end %>
-</ul>
+<%
+=begin%>
+ #<ul>
+#<% @vehicles.each do |vehicle| %>
+  #<li>
+    #<strong><%= vehicle.year %> <%= vehicle.make %> <%= vehicle.name %> <%= vehicle.cartype %></strong> (<%= number_to_currency(vehicle.price) %>)<br>
+    #<%= truncate(vehicle.description, length: 40, separator: ' ') %>
+  #</li>
+  
+#<% end %>
+#</ul> 
+<%
+=end%>
+
+<%= link_to("All Vehicles", root_path) %>
