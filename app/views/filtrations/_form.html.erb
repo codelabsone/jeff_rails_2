@@ -1,0 +1,27 @@
+<%= form_with(model: filtration, local: true) do |form| %>
+  <% if filtration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(filtration.errors.count, "error") %> prohibited this filtration from being saved:</h2>
+
+      <ul>
+      <% filtration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :filtration_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descritpion %>
+    <%= form.text_area :descritpion, id: :filtration_descritpion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @filtration.name %>
+</p>
+
+<p>
+  <strong>Descritpion:</strong>
+  <%= @filtration.descritpion %>
+</p>
+
+<%= link_to 'Edit', edit_filtration_path(@filtration) %> |
+<%= link_to 'Back', filtrations_path %>
