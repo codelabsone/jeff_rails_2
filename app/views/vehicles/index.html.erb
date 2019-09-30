@@ -1,8 +1,9 @@
 <h1>Vehicles</h1>
-
+<%= render 'shared/search_box' %>
 <% @vehicles.each do |vehicle| %>
   <article>
     <header>
+
       <h2><%= link_to(vehicle.name, vehicle_path(vehicle)) %></h2>
     </header>
     <p>
@@ -32,9 +33,9 @@
     #<strong><%= vehicle.year %> <%= vehicle.make %> <%= vehicle.name %> <%= vehicle.cartype %></strong> (<%= number_to_currency(vehicle.price) %>)<br>
     #<%= truncate(vehicle.description, length: 40, separator: ' ') %>
   #</li>
-  
+
 #<% end %>
-#</ul> 
+#</ul>
 <%
 =end%>
 

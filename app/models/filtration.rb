@@ -1,5 +1,5 @@
 class Filtration < ApplicationRecord
-  def @filtration.search(search)
+  def search(search)
     if search
       find(:all, :conditions => ['filtration_name LIKE ?', "%#{search}%"])
     else

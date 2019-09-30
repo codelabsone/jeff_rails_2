@@ -16,13 +16,13 @@ class VehiclesController < ApplicationController
         @vehicles.update(vehicle_params)
         redirect_to @vehicles
     end
-    
+
     def new
         @vehicles = Vehicle.new
     end
 
     def create
-        @vehicles = Vehicles.new(vehicle_params)
+        @vehicles = Vehicle.new(vehicle_params)
         @vehicles.save
         redirect_to @vehicles
     end
