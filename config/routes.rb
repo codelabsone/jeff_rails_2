@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'search/show'
+  get "search" => 'search#show'
 
   resources :filtrations
   root "vehicles#index"
