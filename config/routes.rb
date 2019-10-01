@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :vehicles
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :trade_in
-  
+    get "trade in" => "trade_in#show" 
+
   resources :body_shop
 
 end
