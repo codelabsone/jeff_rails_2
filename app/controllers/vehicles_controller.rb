@@ -30,6 +30,7 @@ class VehiclesController < ApplicationController
         @vehicles.save
         redirect_to @vehicles
     end
+
 private
 
   def vehicle_params
