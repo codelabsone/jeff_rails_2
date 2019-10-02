@@ -1,0 +1,2 @@
+def NewController < ApplicationController
+end
