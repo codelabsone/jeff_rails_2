@@ -1,0 +1,2 @@
+def UsedController < ApplicationController
+end
