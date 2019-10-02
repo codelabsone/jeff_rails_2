@@ -1,3 +1,3 @@
 module TradeInHelper
-   def  
+    
 end
