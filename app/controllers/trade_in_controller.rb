@@ -5,7 +5,7 @@ class TradeInController < ApplicationController
     end
 
     def index
-        @vehicles = Vehicle.all
+        @vehicles = Vehicle.new
     end
-    
+
 end
