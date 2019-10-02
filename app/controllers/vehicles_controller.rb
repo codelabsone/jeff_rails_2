@@ -11,10 +11,6 @@ class VehiclesController < ApplicationController
         @vehicles = Vehicle.find(params[:id])
     end
 
-    def trade_in
-        @vehicles = Vehicle.find(params[:id])
-    end
-
     def update
         @vehicles = Vehicle.find(params[:id])
         @vehicles.update(vehicle_params)
