@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tune/up'
+
   get "search" => "search#show"
 
   resources :filtrations
