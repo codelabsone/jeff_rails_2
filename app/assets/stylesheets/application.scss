@@ -15,3 +15,18 @@
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+a.button {
+    background: red;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    display: inline-grid;
+    margin-top: 8px;
+}
+ul {
+    list-style: none;
+}
+.carousel-control-prev, .carousel-control-next {
+    display: none;
+}
