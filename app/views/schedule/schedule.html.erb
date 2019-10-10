@@ -1,0 +1,25 @@
+<h1> Schedule a Repair! </h1>
+<%= form_for Vehicle.new do |f| %>
+  <p> 
+    <%= f.label :owner %><br/>
+    <%= f.text_field :owner %>
+  </p>
+  <p>
+    <%= f.label :make %><br/>
+    <%= f.text_field :make %>
+  </p>
+  <p>
+    <%= f.label :cartype %><br/>
+    <%= f.text_field :cartype %>
+  </p>
+  <p>
+    <%= f.label :year %><br/>
+    <%= f.number_field :year %>
+  </p>
+  <p>
+    <%= f.label :reason %><br/>
+    <%= f.text_field :reason %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

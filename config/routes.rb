@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'tune/up'
+
+  resources :schedule
+  get "schedule" => "schedule#index"
 
   get "search" => "search#show"
 
